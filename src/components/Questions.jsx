@@ -87,7 +87,7 @@ const Questions = () => {
 	})
 
 	return (
-		<div>
+		<div className="questions">
 			<div className="questions-container">{questionElement}</div>
 			<div className="text-center">
 				{showWarning && (
