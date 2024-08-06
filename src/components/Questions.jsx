@@ -101,7 +101,7 @@ const Questions = () => {
 				{showResult && (
 					<div className="result-container">
 						<p className="result-message">
-							You scored {numCorrectAnswers}/{questionsAndAnswers.length}
+							You scored {numCorrectAnswers}/{questionsAndAnswers.length}{" "}
 							correct answers
 						</p>
 						<button className="play-again-btn" onClick={playAgain}>

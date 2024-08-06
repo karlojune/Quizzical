@@ -1,6 +1,18 @@
-import Questions from "./Questions"
+import { useState } from "react"
+import Questions from "./components/Questions"
+import OpenScreen from "./components/OpenScreen"
+
 const App = () => {
-	return <Questions />
+	const [startGame, setStartGame] = useState(false)
+
+	const clickStartGame = () => {
+		setStartGame(true)
+	}
+	return (
+		<main className="main">
+			{startGame ? <Questions /> : <OpenScreen startGame={clickStartGame} />}
+		</main>
+	)
 }
 
 export default App
