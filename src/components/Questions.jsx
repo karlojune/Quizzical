@@ -27,15 +27,17 @@ const Questions = () => {
 				return {
 					question: questionObject.question,
 					correct_answer: questionObject.correct_answer,
-					all_answers: [
+					all_answers: sortArray([
 						questionObject.correct_answer,
 						...questionObject.incorrect_answers,
-					],
+					]),
 					selected_answer: "",
 				}
 			})
 		)
 	}
+
+	const sortArray = (arr) => arr.sort(() => Math.random() - 0.5)
 
 	const updateAnswer = (currentQuestion, answer) => {
 		setQuestionsAndAnswers((prevQuestion) =>
